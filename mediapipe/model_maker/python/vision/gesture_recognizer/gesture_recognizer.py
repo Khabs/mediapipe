@@ -167,7 +167,7 @@ class GestureRecognizer(classifier.Classifier):
     x = tf.keras.layers.ReLU()(x)
     x = tf.keras.layers.Dropout(rate=dropout_rate)(x)
     outputs = tf.keras.layers.Dense(
-        self._num_classes,
+        30,
         activation='softmax',
         name='custom_gesture_recognizer_out')(
             x)
